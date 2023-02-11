@@ -29,3 +29,9 @@ let products = [
     { product_id: 6, sub_category_id: 5, model: 'polo',     product_name: 'polo xr13', color: 'white', price: '12' },
     { product_id: 7, sub_category_id: 1, model: 'nokia', product_name: '1202 ', color: 'red', price: '20' },
 ]
+export {
+    admins,
+categories,
+subCategories,
+products    
+}

@@ -1,7 +1,8 @@
-import express from "express"
+import express from "express";
+import route from "./catergory/category.js";
 
+const app = express();
+app.use(express.json());
+app.use(route);
 
-const app=express()
-
-
-app.listen(9000,console.log('code run'))
+app.listen(9000, console.log("code run"));
