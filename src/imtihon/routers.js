@@ -107,7 +107,6 @@
     POST
     /categories
         categoryName
-    
     POST
     /subcategories
         categoryId, subCategoryName

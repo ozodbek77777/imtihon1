@@ -10,12 +10,19 @@ route.get("/category", (req, res) => {
       (sub) => sub.category_id == category.category_id
     );
   });
-  write("data", categories);
-  res.json(categories);
+  let category = read("category");
+  category = category.filter((c) =>
+    c.subCategories.filter((sub) => delete sub.category_id)
+  );
+  write("category", categories);
+  res.json(category);
 });
 route.get("/category/:id", (req, res) => {
   const { id } = req.params;
-  const category = read("data");
+  let category = read("category");
+  category = category.filter((c) =>
+  c.subCategories.filter((sub) => delete sub.category_id)
+);
   let find = category.find((c) => c.category_id == id);
 
   res.json(find);
